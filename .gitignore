@@ -1,5 +1,13 @@
-.gradle/
-build/
-temp/
+bin/
 tmp/
-target/
+temp/
+*.tmp
+*.bak
+.buildpath
+.classpath
+.gradle
+.metadata
+.project
+.settings/
+.target
+.tern-project

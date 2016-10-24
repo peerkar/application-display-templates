@@ -1,2 +1,5 @@
-# demo-application-display-templates
-Liferay Application Display Template Demos
+# Liferay Application Display Templates
+
+Application display template examples for Liferay 7 / DXP.
+
+
