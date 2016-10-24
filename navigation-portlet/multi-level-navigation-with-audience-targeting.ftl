@@ -138,29 +138,27 @@
 			
 				<#if isSubMenu>
 					<li class="dropdown dropdown-submenu ${itemCssClass}" ${attrSelected}>
-		    			<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-		    				${entry.getName()} <span class="caret"></span>
+						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+							${entry.getName()} <span class="caret"></span>
 		    			</a>
 				<#else>
 					<li class="dropdown ${itemCssClass}" ${attrSelected}>
-		    			<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-		    				${entry.getName()} <span class="caret"></span>
-			    		</a>
-			    </#if>
+						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+							${entry.getName()} <span class="caret"></span>
+						</a>
+				</#if>
 				<ul class="dropdown-menu" role="menu">
 
 					<#assign nextDepth = depth + 1 />
-
 					<@loopChildren root=entry.children isSubMenu=true depth=nextDepth />
 				</ul>
 				</li>
-
 			<#else>					
-		   	    <li class="${itemCssClass}" ${attrSelected}>
-	    	    	<a href="${entry.getURL()}">${entry.getName()}</a>
-    			</li>    
-    		</#if>
-   		</#if>
+				<li class="${itemCssClass}" ${attrSelected}>
+					<a href="${entry.getURL()}">${entry.getName()}</a>
+				</li>    
+			</#if>
+		</#if>
 	</#list>
 </#macro>		
 
@@ -188,6 +186,6 @@
 		$(this).parent('.dropdown').toggleClass('open');
 		event.preventDefault();
 		return false;
-    });
+	});
     
 </script>
