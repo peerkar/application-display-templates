@@ -93,7 +93,7 @@
 
 			<#assign userSegmentAssetCategoryId = userSegmentLocalService.getUserSegment(userSegmentId).getAssetCategoryId() />
     
-    		<#list navItemCategoryIds as navItemCategoryId>
+			<#list navItemCategoryIds as navItemCategoryId>
 		
 				<#-- Because user segment is a category in itself we have to check if entry is tagged with it (SEO tab) -->
 			
@@ -140,7 +140,7 @@
 					<li class="dropdown dropdown-submenu ${itemCssClass}" ${attrSelected}>
 						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
 							${entry.getName()} <span class="caret"></span>
-		    			</a>
+						</a>
 				<#else>
 					<li class="dropdown ${itemCssClass}" ${attrSelected}>
 						<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
@@ -148,7 +148,6 @@
 						</a>
 				</#if>
 				<ul class="dropdown-menu" role="menu">
-
 					<#assign nextDepth = depth + 1 />
 					<@loopChildren root=entry.children isSubMenu=true depth=nextDepth />
 				</ul>
