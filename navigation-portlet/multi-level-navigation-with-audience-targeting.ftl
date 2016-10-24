@@ -21,7 +21,7 @@
 -->
 
 <#---------------------------------------------------------------->
-<#--Styles														--> 
+<#--Styles                                                      --> 
 <#---------------------------------------------------------------->
 
 <style>
@@ -39,7 +39,7 @@
 </style>
 
 <#---------------------------------------------------------------->
-<#--Debugging													--> 
+<#--Debugging                                                   --> 
 <#---------------------------------------------------------------->
 
 <#assign debug = false />
@@ -64,13 +64,13 @@
     <#assign userSegmentLocalService = serviceLocator.findService("com.liferay.content.targeting.service.UserSegmentLocalService")/>
 	<#assign assetCategoryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
 
-	<#if renderRequest.getAttribute("originalUserSegmentIds")??>
-		<#assign userSegmentIds = renderRequest.getAttribute("originalUserSegmentIds") />
+	<#if renderRequest.getAttribute("userSegmentIds")??>
+		<#assign userSegmentIds = renderRequest.getAttribute("userSegmentIds") />
 	</#if>	
 </#if>
 
 <#---------------------------------------------------------------->
-<#-- Check if entry is visible									-->
+<#-- Check if entry is visible                                  -->
 <#---------------------------------------------------------------->
 
 <#function isVisible entry>
@@ -115,7 +115,7 @@
 </#function>		
 	
 <#---------------------------------------------------------------->
-<#-- Build one level											-->
+<#-- Build one level                                            -->
 <#---------------------------------------------------------------->
 
 <#macro loopChildren root isSubMenu depth>
@@ -165,7 +165,7 @@
 </#macro>		
 
 <#---------------------------------------------------------------->
-<#-- Main loop													-->
+<#-- Main loop                                                  -->
 <#---------------------------------------------------------------->
 
 <#if entries?has_content>
@@ -177,7 +177,7 @@
 </#if>
 
 <#---------------------------------------------------------------->
-<#-- Dropdown script											-->
+<#-- Dropdown script                                            -->
 <#---------------------------------------------------------------->
 
 <script type="text/javascript">
@@ -191,4 +191,3 @@
     });
     
 </script>
-
