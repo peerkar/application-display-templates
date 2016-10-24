@@ -46,13 +46,13 @@
 
 <#if debug>
 	<b>Current userSegmentIds:</b><br />
-    <ul>
-	    <#if renderRequest.getAttribute("userSegmentIds")?? >
-    	    <#list renderRequest.getAttribute("userSegmentIds") as userSegmentId>
-      	      <li>${userSegmentId}</li>
-      	  </#list>
-    </#if>
-    </ul>
+	<ul>
+		<#if renderRequest.getAttribute("userSegmentIds")?? >
+			<#list renderRequest.getAttribute("userSegmentIds") as userSegmentId>
+				<li>${userSegmentId}</li>
+			</#list>
+		</#if>
+	</ul>
 </#if>
 
 <#---------------------------------------------------------------->
@@ -61,7 +61,7 @@
 
 <#if serviceLocator??>
 
-    <#assign userSegmentLocalService = serviceLocator.findService("com.liferay.content.targeting.service.UserSegmentLocalService")/>
+	<#assign userSegmentLocalService = serviceLocator.findService("com.liferay.content.targeting.service.UserSegmentLocalService")/>
 	<#assign assetCategoryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
 
 	<#if renderRequest.getAttribute("userSegmentIds")??>
